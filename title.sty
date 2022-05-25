@@ -1,0 +1,122 @@
+\ProvidesPackage{spbseu-title}
+
+\newcommand*{\student}[1]{\gdef\@student{#1}}
+\newcommand*{\@student}{student}
+
+\newcommand*{\group}[1]{\gdef\@group{#1}}
+\newcommand*{\@group}{group}
+
+\newcommand*{\topic}[1]{\gdef\@topic{#1}}
+\newcommand*{\@topic}{topic}
+
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\@supervisor}{supervisor}
+
+\newcommand*{\svposition}[1]{\gdef\@svposition{#1}}
+\newcommand*{\@svposition}{svposition}
+
+%текст под линией
+\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+%вставка поля для даты 
+\newcommand\insertdate{<<\underline{\quad}>> \, \underline{\qquad\qquad} \number\year г.}
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+
+\centering
+\setstretch{0.8} 
+
+\tikz [remember picture, overlay] %
+\node [shift={(1cm,-1cm)}] at (current page.north west) %
+[anchor=north west] %
+{\includegraphics[scale=0.12]{logo}};
+
+
+\textbf{МИНОБРНАУКИ РОССИИ}
+
+
+\textbf{федеральное государственное бюджетное образовательное \\учреждение высшего образования}
+
+\vspace{1em}
+
+\textbf{«САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ \\ЭКОНОМИЧЕСКИЙ УНИВЕРСИТЕТ»}\\
+(\textbf{СПбГЭУ})
+
+\vspace{1em}
+
+Факультет информатики и прикладной математики\\
+Кафедра прикладной математики и экономико-математических методов
+
+\vspace{3em}
+
+\textbf{КУРСОВАЯ РАБОТА}\\
+по дисциплине:\\
+\textbf{ <<Наименование дисциплины>>}
+
+\vspace{1em}
+
+{Тема\qquad  \underline{\qquad\qquad\qquad\qquad\qquad\qquad}}
+
+\vspace{1em}
+
+\begin{flushleft}
+Направление: 01.03.02 «Прикладная математика и информатика»
+
+\vspace{1em}
+
+Направленность:\\
+\vspace{0.5em}
+Прикладная математика и информатика в экономике и управлении
+
+\vspace{1em}
+
+Обучающийся 3 курса группы \@group  
+\vspace{-2em}
+\begin{flushright} 
+    очной формы обучения 
+\end{flushright}
+
+\vspace{2em}
+\@student 
+\vspace{-2em}
+\begin{flushright}
+    \tline{\textit{(подпись)}}{3cm}
+\end{flushright}
+\vspace{2em}
+
+Проверил \qquad  \underline{\hspace{13cm}}\\
+\vspace{1em}
+Должность \qquad  \underline{\hspace{12.5cm}}\\
+\vspace{1em}
+Оценка \qquad  \underline{\hspace{5cm}}\qquad\qquad Дата\qquad\underline{\hspace{5cm}}\\
+\vspace{1em}
+Подпись \qquad  \underline{\hspace{5cm}}
+
+%\begin{flushright}
+%    \tline{\textit{(подпись)}}{3cm}
+%\end{flushright}
+
+%Нормоконтроль пройден \insertdate\\
+%\vspace{1em}
+%\tline{\textit{(подпись лица, проводившего нормоконтроль)}}{7cm}\\
+
+%\vspace{2em}
+%<<Допущен к защите>>  \qquad \qquad \insertdate\\
+
+%\vspace{2em}
+%Заведующий кафедрой \\д.т.н., профессор Фридман Григорий Морицович 
+%\vspace{-2em}
+%\begin{flushright}
+%  \tline{\textit{(подпись)}}{3cm}  
+%\end{flushright}
+
+\vspace{\fill}
+
+\end{flushleft}
+
+Санкт-Петербург \\
+\number\year
+\clearpage
+
+\end{titlepage}
+}
+\endinput
