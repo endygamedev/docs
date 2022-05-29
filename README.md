@@ -1,4 +1,4 @@
-### Documents
+### Branch 1
 XeLaTeX documents template for university.
 
 Build PDF:
