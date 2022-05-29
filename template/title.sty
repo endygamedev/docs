@@ -28,6 +28,18 @@
 \newcommand*{\svposition}[1]{\gdef\@svposition{#1}}
 \newcommand*{\@svposition}{svposition}
 
+% Код направления
+\newcommand*{\code}[1]{\gdef\@code{#1}}
+\newcommand*{\@code}{code}
+
+% Направление
+\newcommand*{\direction}[1]{\gdef\@direction{#1}}
+\newcommand*{\@direction}{direction}
+
+% Направленность
+\newcommand*{\orientation}[1]{\gdef\@orientation{#1}}
+\newcommand*{\@orientation}{orientation}
+
 % Текст под линией
 \newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
 
@@ -79,11 +91,11 @@
 \vspace{1em}
 
 \begin{flushleft}
-Направление: 01.03.02 <<Прикладная математика и информатика>>
+Направление: \@code \, <<\@direction>>
 
 \vspace{1em}
 
-Направленность: Прикладная математика и информатика в экономике и управлении
+Направленность: \@orientation
 
 \vspace{1em}
 
