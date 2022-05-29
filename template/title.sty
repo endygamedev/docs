@@ -1,0 +1,132 @@
+\ProvidesPackage{spbseu-title}
+
+% ФИО студента
+\newcommand*{\student}[1]{\gdef\@student{#1}}
+\newcommand*{\@student}{student}
+
+% Группа
+\newcommand*{\group}[1]{\gdef\@group{#1}}
+\newcommand*{\@group}{group}
+
+% Тип работы (курсовая работа, реферат, ...)
+\newcommand*{\type}[1]{\gdef\@type{#1}}
+\newcommand*{\@type}{type}
+
+% Дисциплина
+\newcommand*{\discip}[1]{\gdef\@discip{#1}}
+\newcommand*{\@discip}{type}
+
+% Тема работы
+\newcommand*{\topic}[1]{\gdef\@topic{#1}}
+\newcommand*{\@topic}{topic}
+
+% Преподаватель
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}}
+\newcommand*{\@supervisor}{supervisor}
+
+% Должность преподавателя
+\newcommand*{\svposition}[1]{\gdef\@svposition{#1}}
+\newcommand*{\@svposition}{svposition}
+
+% Текст под линией
+\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+
+% Вставка поля для даты 
+\newcommand\insertdate{<<\underline{\quad}>> \, \underline{\qquad\qquad} \number\year г.}
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+
+\centering
+\setstretch{0.8} 
+
+\tikz [remember picture, overlay] %
+\node [shift={(1cm,-1cm)}] at (current page.north west) %
+[anchor=north west] %
+{\includegraphics[scale=0.12]{logo}};
+
+
+\textbf{МИНОБРНАУКИ РОССИИ}
+
+
+\textbf{Федеральное государственное бюджетное образовательное \\учреждение высшего образования}
+
+\vspace{1em}
+
+\textbf{«САНКТ-ПЕТЕРБУРГСКИЙ ГОСУДАРСТВЕННЫЙ \\ЭКОНОМИЧЕСКИЙ УНИВЕРСИТЕТ»}\\
+(\textbf{СПбГЭУ})
+
+\vspace{1em}
+
+Факультет информатики и прикладной математики\\
+Кафедра прикладной математики и экономико-математических методов
+
+\vspace{3em}
+
+\textbf{\MakeUppercase{\@type}}
+
+\vspace{0.4em}
+
+по дисциплине:
+
+\vspace{0.4em}
+
+\textbf{<<\@discip>>}
+
+\vspace{0.4em}
+
+Тема: \@topic 
+
+\vspace{1em}
+
+\begin{flushleft}
+Направление: 01.03.02 <<Прикладная математика и информатика>>
+
+\vspace{1em}
+
+Направленность: Прикладная математика и информатика в экономике и управлении
+
+\vspace{1em}
+
+Студент: \@student
+
+\vspace{1em}
+Группа: \@group
+
+\vspace{-2em}
+\begin{flushright}
+    Подпись: \underline{\hspace{4cm}}
+\end{flushright}
+
+\vspace{2em}
+
+Проверил: \@supervisor
+
+\vspace{1em}
+
+Должность: \@svposition
+
+\vspace{1em}
+
+Оценка: \underline{\hspace{4cm}}
+
+\vspace{-2em}
+
+\begin{flushright}
+    Дата: \underline{\hspace{4cm}}
+\end{flushright}
+
+\vspace{1em}
+Подпись: \underline{\hspace{4cm}}
+
+\vspace{\fill}
+
+\end{flushleft}
+
+Санкт-Петербург \\
+\vspace{0.25cm}
+\number\year
+\clearpage
+
+\end{titlepage}
+}
+\endinput
