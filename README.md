@@ -1,8 +1,19 @@
-<h2><img src="./template/logo.png" width=70>Шаблон для оформления письменных работ СПбГЭУ</h2>
+### Documents
+XeLaTeX documents template for university.
 
-<h3>Зависимости:</h3>
+Build PDF:
+```
+make
+biber main
+make
+```
 
-1. XeTeX — движок
-1. Biblatex — оформление библиографии
+Clean (save only PDF):
+```
+make clean
+```
 
-Пример использования данного шаблона рассмотрен в ветке [`example`](https://github.com/endygamedev/docs/tree/example).
+Remove:
+```
+make remove
+```

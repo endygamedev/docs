@@ -1,0 +1,78 @@
+\documentclass{spbseu}
+
+\usepackage{title}
+\addbibresource{references.bib}
+
+
+% Заполнение данных
+\type{Курсовая работа}
+\discip{Исследование операций}
+\topic{Моделирование оптимизационных задач средствами динамического программирования}
+\code{01.03.02}
+\direction{Прикладная математика и информатика}
+\orientation{Прикладная математика и информатика в экономике и управлении}
+\student{Бронников Егор Игоревич}
+\group{ПМ-1901}
+\supervisor{Чернов Виктор Петрович}
+\svposition{профессор}
+
+
+\begin{document}
+
+% Сохранение нумерации между импортами
+\regtotcounter{page}
+\regtotcounter{figure}
+\regtotcounter{table}
+
+% Титульник
+\maketitle
+
+\newpage
+
+% Содержание
+\setcounter{page}{2}
+\tableofcontents
+
+\newpage
+
+% Введение
+\import{content/}{intro.tex}
+
+\newpage
+
+% Часть 1. Метод динамического прогаммирования
+\import{content/}{section1.tex}
+
+\newpage
+
+% Часть 2. Задачи, решаемые методом динамического прогаммирования
+\import{content/}{section2.tex}
+
+\newpage
+
+% Часть 3. Реализация алгоритма решения оптимизационных задач
+\import{content/}{section3.tex}
+
+\newpage
+
+% Заключение
+\import{content/}{conclusion.tex}
+
+\newpage
+
+% Список литературы
+\addcontentsline{toc}{section}{Список литературы}
+\nocite{*}
+\printbibliography
+
+\newpage
+
+% Приложение А
+\import{content/}{appendix1.tex}
+
+\newpage
+
+% Приложение Б
+\import{content/}{appendix2.tex}
+
+\end{document}
