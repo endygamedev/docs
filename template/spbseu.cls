@@ -32,6 +32,7 @@
 \usepackage{indentfirst}    % красная строка после заголовка
 \usepackage{amsmath}        % математические формулы
 \usepackage{amssymb}        % математические символы
+\usepackage{mathtools}      % для скобок с условиями
 \usepackage{graphicx}       % вставка картинок
 \usepackage{setspace}       % команды для найстройки отступов
 
@@ -221,3 +222,18 @@
   breakatwhitespace=true,
   tabsize=3
 }
+
+% Отступы в cases
+\makeatletter
+\patchcmd{\env@cases}{1.2}{0.6}{}{}
+\makeatother
+
+% Выравнивание подписей
+\usepackage[justification=centering]{caption}
+
+% Ширина колонок
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Работа с ссылками
+\usepackage{hyperref}
