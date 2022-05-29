@@ -1,19 +1,8 @@
-### Documents
-XeLaTeX documents template for university.
+<h2><img src="./template/logo.png" width=70>Шаблон для оформления письменных работ СПбГЭУ</h2>
 
-Build PDF:
-```
-make
-biber main
-make
-```
+<h6>Зависимости:</h6>
 
-Clean (save only PDF):
-```
-make clean
-```
+1. XeTeX -- движок
+1. Biblatex -- оформление библиографии
 
-Remove:
-```
-make remove
-```
+Пример использования данного шаблона рассмотрен в ветке [`example`](https://github.com/endygamedev/docs/tree/example).
